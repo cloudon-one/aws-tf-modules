@@ -1,6 +1,6 @@
 module "rds" {
   source                                = "terraform-aws-modules/rds/aws"
-  version                               = "3.4.1"
+  version                               = "5.9.0"
   allocated_storage                     = var.allocated_storage
   availability_zone                     = var.availability_zone
   backup_retention_period               = var.backup_retention_period

@@ -1,6 +1,6 @@
 module "cloudtrail" {
   source                        = "cloudposse/cloudtrail/aws"
-  version                       = "0.21.0"
+  version                       = "0.23.0"
   delimiter                     = var.delimiter
   enabled                       = var.enabled
   environment                   = var.environment

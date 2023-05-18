@@ -1,6 +1,6 @@
 module "eks" {
   source                                             = "terraform-aws-modules/eks/aws"
-  version                                            = "17.24.0"
+  version                                            = "19.14.0"
   cluster_endpoint_private_access_cidrs              = var.cluster_endpoint_private_access_cidrs
   cluster_endpoint_private_access_sg                 = var.cluster_endpoint_private_access_sg
   cluster_service_ipv4_cidr                          = var.cluster_service_ipv4_cidr

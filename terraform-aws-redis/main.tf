@@ -1,6 +1,6 @@
 module "elasticache-redis" {
   source                               = "cloudposse/elasticache-redis/aws"
-  version                              = "0.41.2"
+  version                              = "0.51.0"
   allow_all_egress                     = var.allow_all_egress
   auth_token                           = var.auth_token
   delimiter                            = var.delimiter

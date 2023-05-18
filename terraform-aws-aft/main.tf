@@ -1,6 +1,6 @@
 module "control_tower_account_factory" {
   source                                          = "aws-ia/control_tower_account_factory/aws"
-  version                                         = "1.0.8"
+  version                                         = "1.10.3"
   aft_management_account_id                       = var.aft_management_account_id
   audit_account_id                                = var.audit_account_id
   ct_home_region                                  = var.ct_home_region
@@ -37,21 +37,21 @@ module "control_tower_account_factory" {
 }
 
 
-#resource "aws_s3_bucket" "main" {
-#  bucket        = var.root_state_bucket
-#  acl           = "private"
-#  force_destroy = true
-#
-#  versioning {
-#    enabled = true
-#  }
-#
-#  server_side_encryption_configuration {
-#    rule {
-#      apply_server_side_encryption_by_default {
-#        kms_master_key_id = "arn:aws:kms:${var.default_region}:${var.root_account_id}:alias/aws/s3"
-#        sse_algorithm     = "aws:kms"
-#      }
-#    }
-#  }
-#}
+resource "aws_s3_bucket" "main" {
+  bucket        = var.root_state_bucket
+  acl           = "private"
+  force_destroy = true
+
+  versioning {
+    enabled = true
+  }
+
+  server_side_encryption_configuration {
+    rule {
+      apply_server_side_encryption_by_default {
+        kms_master_key_id = "arn:aws:kms:${var.default_region}:${var.root_account_id}:alias/aws/s3"
+        sse_algorithm     = "aws:kms"
+      }
+    }
+  }
+}

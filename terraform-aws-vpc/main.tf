@@ -1,6 +1,6 @@
 module "vpc" {
   source                                             = "terraform-aws-modules/vpc/aws"
-  version                                            = "3.11.0"
+  version                                            = "4.0.2"
   database_subnet_assign_ipv6_address_on_creation    = var.database_subnet_assign_ipv6_address_on_creation
   database_subnet_group_name                         = var.database_subnet_group_name
   default_security_group_egress                      = var.default_security_group_egress

@@ -1,6 +1,6 @@
 module "iam_iam-account" {
   source                         = "terraform-aws-modules/iam/aws//modules/iam-account"
-  version                        = "4.7.0"
+  version                        = "5.19.0"
   account_alias                  = var.account_alias
   password_reuse_prevention      = var.password_reuse_prevention
   allow_users_to_change_password = var.allow_users_to_change_password
@@ -16,7 +16,7 @@ module "iam_iam-account" {
 }
 module "iam_iam-assumable-roles" {
   source                                  = "terraform-aws-modules/iam/aws//modules/iam-assumable-roles"
-  version                                 = "4.7.0"
+  version                                 = "5.19.0"
   admin_role_name                         = var.admin_role_name
   admin_role_path                         = var.admin_role_path
   admin_role_permissions_boundary_arn     = var.admin_role_permissions_boundary_arn
